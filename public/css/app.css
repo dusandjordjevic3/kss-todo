@@ -1,0 +1,287 @@
+:root {
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --grey: #6B7280;
+    --pink: #EC4899;
+    --purple: #8B5CF6;
+    --light: #EEE;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Fira sans", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #FFF;
+    background-color: var(--dark);
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1{ 
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--grey);
+    margin-bottom: 1rem;
+}
+
+#novi-zadatak-forma {
+    display: flex;
+}
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#novi-zadatak-unos {
+
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size: 1.25rem;
+}
+
+#novi-zadatak-unos::placeholder {
+    color: var(--grey);
+}
+
+#novi-zadatak-dodaj {
+    color: var(--pink);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.kompletiranje-zadatka
+{
+    margin-right:5px;
+}
+#novi-zadatak-dodaj:hover {
+    opacity: 0.8;
+}
+
+#novi-zadatak-dodaj:active {
+    opacity: 0.6;
+}
+.vremena
+{
+    font-size: 0.7rem;
+    margin-right:1rem;
+}
+.naslov
+{
+    display:flex;
+    justify-content: space-between;
+}
+.naslov 
+{
+    color: var(--grey);
+}
+.greska
+{
+    margin-top: 1rem;
+    color:red;
+
+}
+main {
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.todo-lista {
+    padding: 1rem;
+}
+
+.todo-lista h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--grey);
+    margin-bottom: 1rem;
+    display:inline;
+}
+
+#zadaci .zadatak {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.zadatak .sadrzaj {
+    flex: 1 1 0%;
+}
+
+.zadatak .sadrzaj .tekst {
+    color: var(--light);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+.zadatak .sadrzaj .tekst:not(:read-only) {
+    color: var(--pink);
+}
+
+.zadatak .radnje {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.zadatak .radnje button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.zadatak .radnje button:hover {
+    opacity: 0.8;
+}
+
+.zadatak .radnje button:active {
+    opacity: 0.6;
+}
+
+.zadatak .radnje .izmena {
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.odjava-btn
+{
+    color:white;
+    position: fixed;
+    color: var(--pink);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+    top:5px;
+    right:5px;
+}
+.odjava-btn:hover
+{
+   opacity:0.8;
+   transform: 0.4s;
+}
+.zadatak .radnje .obrisi {
+    color: crimson;
+}
+body{
+	margin: 0;
+	padding: 0;
+	background: url('../i.jpg');
+	background-size: cover;
+	background-position: top;
+	font-family: sans-serif;
+}
+
+.loginbox{
+	width: 350px;
+	height: 490px;
+	background: #000;
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform:  translate(-50%,-50%);
+	box-sizing:  border-box;
+	padding: 70px 30px;
+
+
+
+}
+.avatar{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	top: -50px;
+	left: calc(50% - 50px);
+
+}
+h1{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: 22px;
+}
+
+.loginbox p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+.loginbox input{
+	width: 100%;
+	margin-bottom: 20px;
+}
+.loginbox input[type="text"], input[type="password"],input[type="email"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+.loginbox input[type="submit"]
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #0080ff;
+	color: white;
+	font-size: 18px;
+	border-radius: 20px;
+	font-weight: bold;
+
+}
+.loginbox input[type="submit"]:hover
+{
+	cursor: pointer;
+	background: white;
+	color: black;
+
+}
+.loginbox a{
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 20px;
+	color: darkgrey;
+}
+.loginbox a:hover
+{
+	color: white;
+}

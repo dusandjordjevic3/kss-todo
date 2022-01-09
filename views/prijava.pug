@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Ulogujte se
+    link(rel='stylesheet' type='text/css' href='/css/app.css')
+  body
+    .loginbox
+      img.avatar(src='A.png')
+      h1 Prijavite se
+      br
+      form(name='forma' action='/prijava' method='POST' onsubmit='return ValidacijaLoginForme(forma)')
+        p Korisničko ime:
+        input(type='text' name='KorisnickoIme' placeholder='Unesite svoje korisničko ime')
+        p Lozinka:
+        input(type='password' name='Lozinka' placeholder='Unesite svoju lozinku')
+        input(type='submit' onclick='ValidacijaLoginForme(forma)' name='OnSubmit' value='Prijavi se')
+        center
+          a(href='/registracija')
+            h2 Napravite novi nalog
+          .greska=tekst_greske
+    script(src='/js/jquery.js')
+    script(src='/js/main.js')

@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Todo Lista
+    link(rel='stylesheet' href='/css/app.css')
+  body
+    header
+      form(action="/odjava" method="POST")
+        input(type="submit" class="odjava-btn" value="Odjavi se")
+      h1 To-do lista
+      form#novi-zadatak-forma
+        input#novi-zadatak-unos(type='text' name='novi-zadatak-unos' placeholder='Šta imate isplanirano?')
+        input#novi-zadatak-dodaj(type='submit' value='Dodaj')
+    main
+      section.todo-lista
+        .naslov 
+          h2 Zadatak
+          span.prosecno_vreme
+        #zadaci
+    script(src='/js/jquery.js')
+    script(src='/js/main.js')

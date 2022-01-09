@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Registrujte se
+    link(rel='stylesheet' type='text/css' href='/css/app.css')
+  body
+    .loginbox
+      img.avatar(src='A.png')
+      h1 Registrujte se
+      br
+      form(name='forma' action='/registracija' method='POST' onsubmit='return ValidacijaFormeZaRegistraciju(forma)')
+        p
+          | Korisničko ime:
+          font(color='red') *
+        input(type='text' name='KorisnickoIme' placeholder='Izaberite svoje korisničko ime')
+        p
+          | Lozinka:
+          font(color='red') *
+        input(type='password' name='Lozinka' placeholder='Izaberite svoju lozniku')
+        p
+          | E-mail:
+          font(color='red') *
+        input(type='email' name='mail' placeholder='Unesite svoj E-mail')
+        input(type='submit' name='OnSubmit' value='Registruj se')
+        .greska=tekst_greske
+    script(src='/js/jquery.js')
+    script(src='/js/main.js')
